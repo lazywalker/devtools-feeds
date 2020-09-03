@@ -1,0 +1,17 @@
+diff --git a/examples/oled_demo.cpp b/examples/oled_demo.cpp
+index 10085d8..a70d513 100644
+--- a/examples/oled_demo.cpp
++++ b/examples/oled_demo.cpp
+@@ -43,8 +43,11 @@ struct s_opts
+ 	int oled;
+ 	int verbose;
+ } ;
+-
++#ifdef OPENWRT
++int sleep_divisor = 16 ;
++#else
+ int sleep_divisor = 1 ;
++#endif
+ 	
+ // default options values
+ s_opts opts = {

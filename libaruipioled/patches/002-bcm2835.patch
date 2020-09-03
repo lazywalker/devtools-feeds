@@ -3,11 +3,11 @@ index 75954d7..cd412dd 100644
 --- a/bcm2835.c
 +++ b/bcm2835.c
 @@ -818,6 +818,8 @@ int bcm2835_i2c_begin(void)
-
+ 
  #if BANANAPI
-        if ((fd = open ("/dev/i2c-2", O_RDWR)) < 0)
+ 	if ((fd = open ("/dev/i2c-2", O_RDWR)) < 0)
 +#elif OPENWRT
-+       if ((fd = open ("/dev/i2c-0", O_RDWR)) < 0)
++	if ((fd = open ("/dev/i2c-0", O_RDWR)) < 0)
  #else
-        if ((fd = open (bcm2835_get_pi_version() == 1 ? "/dev/i2c-0":"/dev/i2c-1" , O_RDWR)) < 0)
+ 	if ((fd = open (bcm2835_get_pi_version() == 1 ? "/dev/i2c-0":"/dev/i2c-1" , O_RDWR)) < 0)
  #endif

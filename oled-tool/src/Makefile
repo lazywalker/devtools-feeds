@@ -14,8 +14,8 @@ BIN:	$(OBJECTS)
 		$(CC) $(CFLAGS) -c -o $@ $<
 
 install:
-		install -m 755 oled /usr/local/bin/
+		install -m 755 $(BIN) /usr/local/bin/
 
 clean:
-		$(RM) oled *.o *.d *.bak *~
+		$(RM) $(BIN) *.o *.d *.bak *~
  

@@ -2,17 +2,17 @@
 # Copyright 2020 Michael BD7MQB <bd7mqb@qq.com>
 # This is free software, licensed under the GNU GENERAL PUBLIC LICENSE, Version 3.0
 #
-# This library depends on KERNEL_DEVMEM, which means the /dev/mem device must be on.
+# This library depends on KERNEL_DEVMEM, which means the /dev/mem device must be on (CONFIG_KERNEL_DEVMEM=y).
 
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=libaruipioled
 PKG_REV:=4119148
-PKG_VERSION:=0.1.2
-PKG_RELEASE:=4
+PKG_VERSION:=0.1.3
+PKG_RELEASE:=1
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.bz2
-PKG_SOURCE_URL:=https://github.com/hallard/ArduiPi_OLED
+PKG_SOURCE_URL:=https://github.com/lazywalker/ArduiPi_OLED
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
 PKG_SOURCE_VERSION:=$(PKG_REV)
 PKG_SOURCE_PROTO:=git
